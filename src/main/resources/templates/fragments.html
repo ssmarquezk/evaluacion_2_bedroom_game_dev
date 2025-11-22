@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fragments</title>
+</head>
+<body>
+    <nav th:fragment="navbar(activePage)" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">GameDev Tutorials</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" th:classappend="${activePage == 'usuarios'} ? 'active' : ''" href="/usuarios">Usuarios</a>
+                <a class="nav-link" th:classappend="${activePage == 'tutoriales'} ? 'active' : ''" href="/tutoriales">Ver Tutoriales</a>
+                <a class="nav-link" th:classappend="${activePage == 'mis-tutoriales'} ? 'active' : ''" href="/mis-tutoriales">Mis Tutoriales</a>
+                <a class="nav-link" href="/login">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
