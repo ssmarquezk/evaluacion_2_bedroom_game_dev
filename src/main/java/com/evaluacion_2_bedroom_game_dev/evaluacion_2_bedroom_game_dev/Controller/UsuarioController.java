@@ -83,18 +83,13 @@ public class UsuarioController {
         return "tutoriales";
     }
     
-    @GetMapping("/acceso-rapido")
-    public String accesoRapido() {
-        return "acceso-rapido";
-    }
-    
     @GetMapping("/mis-tutoriales")
     public String misTutorialesAuto(HttpSession session) {
         Usuario usuario = (Usuario) session.getAttribute("usuarioLogueado");
         if (usuario != null) {
             return "redirect:/mis-tutoriales/" + usuario.id();
         }
-        return "redirect:/acceso-rapido";
+        return "redirect:/login";
     }
     
 
@@ -127,15 +122,5 @@ public class UsuarioController {
         return "redirect:/usuarios";
     }
     
-    @GetMapping("/api/usuario-por-email")
-    @ResponseBody
-    public Map<String, Object> buscarUsuarioPorEmail(@RequestParam String email) {
-        Map<String, Object> response = new HashMap<>();
-        Optional<Usuario> usuario = usuarioService.buscarPorEmail(email);
-        if (usuario.isPresent()) {
-            response.put("id", usuario.get().id());
-            response.put("nombre", usuario.get().nombre());
-        }
-        return response;
-    }
+
 }

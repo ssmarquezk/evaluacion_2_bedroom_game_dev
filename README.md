@@ -47,7 +47,6 @@ La aplicación ha evolucionado significativamente desde la Evaluación 1:
 - **Relaciones entre entidades:** Usuario ↔ Tutorial (OneToMany/ManyToOne)
 - **Interfaz moderna:** Migración completa a Bootstrap 5.3.2
 - **Funcionalidades avanzadas:** 
-  - Acceso rápido por email
   - Gestión personal de tutoriales
   - Validación de URLs de imágenes
   - Navegación consistente
@@ -527,9 +526,7 @@ public class TutorialController {
 ![Ver Tutorial](capturas/funcional/tutoriales/ver-tutorial.png)
 *Visualización completa del contenido del tutorial*
 
-#### Acceso Rápido
-![Acceso Rápido](capturas/funcional/autenticacion/acceso-rapido.png)
-*Funcionalidad de acceso directo por email*
+
 
 ---
 
@@ -562,7 +559,7 @@ public class TutorialController {
 **Sistema de Autenticación**
 - [ ] **login.png** - Pantalla de login con formulario Bootstrap
 - [ ] **registro.png** - Formulario de registro de usuarios
-- [ ] **acceso-rapido.png** - Funcionalidad de acceso rápido por email
+
 
 **Gestión de Usuarios**
 - [ ] **usuarios.png** - Lista de usuarios con tabla redondeada
@@ -631,7 +628,7 @@ capturas/
 4. **Relaciones JPA** correctamente implementadas (OneToMany/ManyToOne)
 5. **Interfaz moderna y responsive** con componentes Bootstrap
 6. **Datos especializados** en desarrollo de videojuegos (Unity, C#, Godot, etc.)
-7. **Funcionalidades avanzadas** como acceso rápido y validación de URLs
+7. **Funcionalidades avanzadas** como validación de URLs
 8. **Tablas redondeadas** para mejor aspecto visual
 
 ### Tecnologías Utilizadas
