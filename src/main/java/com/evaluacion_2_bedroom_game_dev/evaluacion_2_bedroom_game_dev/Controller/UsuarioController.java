@@ -4,17 +4,12 @@ import com.evaluacion_2_bedroom_game_dev.evaluacion_2_bedroom_game_dev.model.Usu
 import com.evaluacion_2_bedroom_game_dev.evaluacion_2_bedroom_game_dev.model.Tutorial;
 import com.evaluacion_2_bedroom_game_dev.evaluacion_2_bedroom_game_dev.service.IUsuarioService;
 import com.evaluacion_2_bedroom_game_dev.evaluacion_2_bedroom_game_dev.service.ITutorialService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.bind.annotation.ResponseBody;
 import jakarta.servlet.http.HttpSession;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.Optional;
 
 @Controller
 public class UsuarioController {

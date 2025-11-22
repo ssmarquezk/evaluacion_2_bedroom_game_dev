@@ -21,9 +21,7 @@
    - 2.3 [Código de Repositorios](#23-código-de-repositorios)
    - 2.4 [Código de Servicios](#24-código-de-servicios)
    - 2.5 [Código de Controladores](#25-código-de-controladores)
-   - 2.6 [Capturas Funcionales](#26-capturas-funcionales)
-3. [Guía de Capturas](#3-guía-de-capturas)
-4. [Conclusiones](#4-conclusiones)
+3. [Conclusiones](#3-conclusiones)
 
 ---
 
@@ -504,132 +502,19 @@ public class TutorialController {
 }
 ```
 
-### 2.6 Capturas Funcionales
-
-#### Pantalla de Login
-![Login](capturas/funcional/autenticacion/login.png)
-*Sistema de autenticación con validación de credenciales y Bootstrap*
-
-#### Lista de Usuarios (Admin)
-![Usuarios](capturas/funcional/usuarios/usuarios.png)
-*Gestión de usuarios con operaciones CRUD y tablas redondeadas*
-
-#### Catálogo de Tutoriales
-![Tutoriales](capturas/funcional/tutoriales/tutoriales.png)
-*Vista pública de tutoriales con diseño de cards Bootstrap*
-
-#### Gestión Personal de Tutoriales
-![Mis Tutoriales](capturas/funcional/tutoriales/mis-tutoriales.png)
-*CRUD completo para tutoriales del usuario logueado*
-
-#### Vista Detallada de Tutorial
-![Ver Tutorial](capturas/funcional/tutoriales/ver-tutorial.png)
-*Visualización completa del contenido del tutorial*
-
-
-
 ---
 
-## 3. GUÍA DE CAPTURAS
-
-### Capturas Requeridas para la Documentación
-
-#### 3.1 Capturas de Código (IDE)
-
-**Entidades (@Entity)**
-- [ ] `Usuario.java` - Mostrar anotaciones JPA y relación OneToMany
-- [ ] `Tutorial.java` - Mostrar anotaciones JPA y relación ManyToOne
-
-**Repositorios (@Repository)**  
-- [ ] `UsuarioRepository.java` - Interface con métodos personalizados
-- [ ] `TutorialRepository.java` - Interface con consultas por usuario
-
-**Servicios (@Service)**
-- [ ] `IUsuarioService.java` - Interface del servicio
-- [ ] `UsuarioServiceImpl.java` - Implementación con @Autowired
-- [ ] `ITutorialService.java` - Interface del servicio
-- [ ] `TutorialServiceImpl.java` - Implementación
-
-**Controladores (@Controller)**
-- [ ] `UsuarioController.java` - Métodos de login y gestión de usuarios
-- [ ] `TutorialController.java` - CRUD completo de tutoriales
-
-#### 3.2 Capturas Funcionales (Navegador)
-
-**Sistema de Autenticación**
-- [ ] **login.png** - Pantalla de login con formulario Bootstrap
-- [ ] **registro.png** - Formulario de registro de usuarios
-
-
-**Gestión de Usuarios**
-- [ ] **usuarios.png** - Lista de usuarios con tabla redondeada
-- [ ] **usuarios-crud.png** - Demostrar eliminación de usuario
-
-**Gestión de Tutoriales**
-- [ ] **tutoriales.png** - Catálogo público con cards Bootstrap
-- [ ] **mis-tutoriales.png** - Gestión personal con formulario de creación
-- [ ] **crear-tutorial.png** - Formulario de creación funcionando
-- [ ] **editar-tutorial.png** - Formulario de edición con datos precargados
-- [ ] **ver-tutorial.png** - Vista detallada de un tutorial
-
-**Funcionalidades Especiales**
-- [ ] **tutoriales-usuario.png** - Tutoriales de un usuario específico
-- [ ] **navegacion.png** - Navbar Bootstrap con enlaces activos
-- [ ] **responsive.png** - Vista móvil/responsive
-
-#### 3.3 Capturas de Base de Datos
-- [ ] **bd-usuarios.png** - Tabla usuarios con datos de prueba
-- [ ] **bd-tutoriales.png** - Tabla tutoriales con relaciones
-- [ ] **bd-relaciones.png** - Demostrar foreign keys
-
-### Organización de Archivos
-
-```
-capturas/
-├── codigo/
-│   ├── entidades/
-│   ├── repositorios/
-│   ├── servicios/
-│   └── controladores/
-├── funcional/
-│   ├── autenticacion/
-│   ├── usuarios/
-│   └── tutoriales/
-└── base-datos/
-```
-
-### Instrucciones para las Capturas
-
-**Para Código (IDE):**
-1. Abrir archivo en el IDE
-2. Asegurar que se vean las anotaciones importantes (@Entity, @Repository, etc.)
-3. Capturar con buena resolución
-4. Incluir nombre del archivo en la captura
-
-**Para Funcionalidades (Navegador):**
-1. Usar datos de prueba realistas
-2. Mostrar URLs en la barra de direcciones
-3. Capturar pantalla completa o ventana del navegador
-4. Demostrar funcionalidad real (formularios enviados, datos guardados, etc.)
-
-**Para Base de Datos:**
-1. Usar herramienta de administración de BD o consola H2
-2. Mostrar estructura de tablas y datos
-3. Evidenciar relaciones entre tablas
-
----
-
-## 4. CONCLUSIONES
+## 3. CONCLUSIONES
 
 ### Logros Alcanzados
-1. **Migración completa a Bootstrap 5.3.2** eliminando cientos de líneas de CSS personalizado
+1. **Tema oscuro moderno** con variables CSS y diseño profesional
 2. **Sistema de autenticación robusto** con gestión de sesiones
 3. **CRUD completo** para usuarios y tutoriales con validaciones
 4. **Relaciones JPA** correctamente implementadas (OneToMany/ManyToOne)
-5. **Interfaz moderna y responsive** con componentes Bootstrap
-6. **Datos especializados** en desarrollo de videojuegos (Unity, C#, Godot, etc.)
-7. **Funcionalidades avanzadas** como validación de URLs
-8. **Tablas redondeadas** para mejor aspecto visual
+5. **Interfaz moderna y responsive** con Bootstrap 5.3.2 + CSS personalizado
+6. **Base de datos extensa** con 50 usuarios y 50 tutoriales especializados
+7. **Contenido educativo real** con ejemplos de código y explicaciones detalladas
+8. **Favicon y branding** consistente en toda la aplicación
 
 ### Tecnologías Utilizadas
 - **Backend:** Spring Boot 3.x, Spring Data JPA, Hibernate
@@ -645,9 +530,9 @@ capturas/
 | Entidades | 1 (LIBROS) | 2 (USUARIOS, TUTORIALES) |
 | Relaciones | Ninguna | 1:N (Usuario-Tutorial) |
 | Autenticación | No | Sí (login/registro) |
-| Interfaz | CSS personalizado | Bootstrap 5.3.2 |
-| Campos | básicos | especializados + URLs |
-| Datos | genéricos | videojuegos específicos |
-| Funcionalidades | CRUD básico | CRUD + sesiones + validaciones |
+| Interfaz | CSS básico | Tema oscuro moderno + Bootstrap |
+| Datos | 3 libros genéricos | 50 usuarios + 50 tutoriales especializados |
+| Contenido | Información básica | Tutoriales completos con código |
+| Funcionalidades | CRUD básico | CRUD + sesiones + validaciones + favicon |
 
 El proyecto ha evolucionado de un simple CRUD de libros a una aplicación web completa especializada en tutoriales de desarrollo de videojuegos, con autenticación, gestión de usuarios, interfaz moderna y funcionalidades avanzadas, demostrando el dominio de Spring Boot y las mejores prácticas de desarrollo web.

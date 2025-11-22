@@ -1,0 +1,238 @@
+/* Dark Theme Moderno para GameDev Tutorials */
+:root {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --accent-primary: #238636;
+    --accent-secondary: #1f6feb;
+    --border-color: #30363d;
+    --hover-bg: #262c36;
+    --card-bg: #161b22;
+    --gradient-primary: linear-gradient(135deg, #238636, #1f6feb);
+}
+
+body {
+    background: url('/images/landingBackground.png') center/cover no-repeat fixed;
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+
+@keyframes fadeInOut {
+
+        0%,
+        100% {
+            opacity: 0;
+        }
+
+        10%,
+        90% {
+            opacity: 1;
+        }
+    }
+
+/* Navbar moderna */
+.navbar-dark {
+    background: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 4px;
+    padding: 8px 16px !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary) !important;
+    background-color: var(--hover-bg);
+}
+
+/* Cards modernas */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+    background-color: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 12px 12px 0 0 !important;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.card-body {
+    color: var(--text-primary);
+}
+
+/* Botones modernos */
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+}
+
+.btn-success {
+    background-color: var(--accent-primary);
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-warning {
+    background-color: #f85149;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-danger {
+    background-color: #da3633;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Formularios */
+.form-control {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--bg-tertiary);
+    border-color: var(--accent-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(31, 111, 235, 0.25);
+    color: var(--text-primary);
+}
+
+.form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Tablas */
+.table-dark {
+    --bs-table-bg: var(--bg-secondary);
+    --bs-table-striped-bg: var(--bg-tertiary);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-dark th {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.table-dark td {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Alertas */
+.alert-success {
+    background-color: rgba(35, 134, 54, 0.15);
+    border-color: var(--accent-primary);
+    color: #7ee787;
+}
+
+.alert-danger {
+    background-color: rgba(248, 81, 73, 0.15);
+    border-color: #f85149;
+    color: #ffa198;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-secondary) !important;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Login especial */
+.login-container {
+    background: var(--bg-primary);
+    min-height: 100vh;
+}
+
+.login-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Efectos de hover para imágenes */
+.img-thumbnail {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-tertiary);
+    transition: transform 0.2s ease;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.texto-brillante {
+        text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.555);
+    }
+
+.auto-fade {
+        animation: fadeInOut 1s infinite;
+    }
+
+    .separador1 {
+        width: 100%;
+        height: 50px;
+    }
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}

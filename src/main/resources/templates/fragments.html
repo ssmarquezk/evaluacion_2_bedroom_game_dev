@@ -4,9 +4,12 @@
     <title>Fragments</title>
 </head>
 <body>
-    <nav th:fragment="navbar(activePage)" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav th:fragment="navbar(activePage)" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">GameDev Tutorials</a>
+            <h3 class="texto-brillante d-flex align-items-center">
+                <img src="/images/logo.png" alt="Logo" height="30" class="me-2">
+                    BedroomGamedev
+            </h3>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" th:classappend="${activePage == 'usuarios'} ? 'active' : ''" href="/usuarios">Usuarios</a>
                 <a class="nav-link" th:classappend="${activePage == 'tutoriales'} ? 'active' : ''" href="/tutoriales">Ver Tutoriales</a>
@@ -16,11 +19,25 @@
         </div>
     </nav>
 
+    <div th:fragment="logoAnimated">
+        <div class="container mt-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <img src="/images/logo.png" class="img" alt="Logo">
+                </div>
+                <div class="col-auto">
+                    <img src="/images/_.png" class="img auto-fade" alt="Icono">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <footer th:fragment="footer" class="bg-dark text-light py-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>GameDev Tutorials</h5>
+                    <h5><img src="/images/logo.png" alt="Logo" height="30" class="me-2"> BedroomGameDev</h5>
                     <p class="mb-0">Plataforma de tutoriales para desarrollo de videojuegos</p>
                 </div>
                 <div class="col-md-6 text-md-end">
