@@ -1,14 +1,20 @@
 # EVALUACIÓN 2 - DESARROLLO DE APLICACIONES WEB
+
+
+
+![alt text](/src/main/resources/static/images/logo_ipss_mid.png)
+
+<br>
+
+
+![alt text](/src/main/resources/static/images/brgd_logo_mid.png)
+
 ## Sistema de Gestión de Tutoriales de Desarrollo de Videojuegos
 
----
-
-**Asignatura:** Desarrollo de Aplicaciones Web  
-**Profesor:** [Nombre del Profesor]  
-**Alumno:** [Tu Nombre]  
+**Asignatura:** Desarrollo de Software Web 2  
+**Profesor:** Vicente Zapata  
+**Alumno:** Sebastián Márquez  
 **Fecha:** Diciembre 2024  
-
-![Logo IPSS](https://via.placeholder.com/200x100/0066CC/FFFFFF?text=IPSS+LOGO)
 
 ---
 
@@ -28,28 +34,23 @@
 ## 1. INTRODUCCIÓN
 
 ### Objetivo del Trabajo
-El objetivo de esta evaluación es desarrollar una aplicación web completa utilizando Spring Boot que permita gestionar tutoriales de desarrollo de videojuegos, implementando operaciones CRUD completas, autenticación de usuarios y una interfaz moderna con Bootstrap.
+El objetivo de esta evaluación es desarrollar una aplicación web completa utilizando Spring Boot que permita gestionar tutoriales de desarrollo de videojuegos, implementando operaciones CRUD completas, autenticación de usuarios y una interfaz funcional y fragmentada con thymeleaf.
 
 ### Evolución desde la EV1
 La aplicación ha evolucionado significativamente desde la Evaluación 1:
 
 **EV1 - Estado Inicial:**
-- Sistema básico de gestión de libros
-- CRUD simple sin autenticación
-- Interfaz básica con CSS personalizado
-- Una sola entidad (Libro)
+- vistas sin bakend
+- CRUD simple sin autenticación (solo datos pasados por controlador)
+- sin entidades
 
 **EV2 - Estado Actual:**
-- **Temática especializada:** Migración completa a tutoriales de desarrollo de videojuegos
 - **Sistema de usuarios:** Implementación de registro, login y gestión de sesiones
-- **Relaciones entre entidades:** Usuario ↔ Tutorial (OneToMany/ManyToOne)
-- **Interfaz moderna:** Migración completa a Bootstrap 5.3.2
+- **Relaciones entre entidades:** Usuario ↔ Tutorial (uno a muchos)
 - **Funcionalidades avanzadas:** 
   - Gestión personal de tutoriales
-  - Validación de URLs de imágenes
   - Navegación consistente
-  - Tablas con esquinas redondeadas
-- **Datos especializados:** 20+ tutoriales reales de Unity, C#, Godot, pixel art, etc.
+- **Datos persistentes:** Base de datos funcional con datos iniciales de ejemlo
 
 ---
 
@@ -59,25 +60,26 @@ La aplicación ha evolucionado significativamente desde la Evaluación 1:
 
 #### Diagrama de Entidades y Relaciones
 
+
 ```mermaid
 erDiagram
     USUARIOS {
-        BIGINT id PK "AUTO_INCREMENT"
-        VARCHAR(50) nombre "NOT NULL"
-        VARCHAR(50) email "UNIQUE, NOT NULL"
-        VARCHAR(255) password "NOT NULL"
-        VARCHAR(20) rol "DEFAULT 'USER'"
+        bigint id PK
+        varchar nombre
+        varchar email
+        varchar password
+        varchar rol
     }
-    
+
     TUTORIALES {
-        BIGINT id PK "AUTO_INCREMENT"
-        VARCHAR(100) titulo "NOT NULL"
-        VARCHAR(500) imagen "NULLABLE"
-        TEXT cuerpo "NOT NULL"
-        VARCHAR(200) descripcion "NULLABLE"
-        BIGINT usuario_id FK "NOT NULL"
+        bigint id PK
+        varchar titulo
+        varchar imagen
+        text cuerpo
+        varchar descripcion
+        bigint usuario_id
     }
-    
+
     USUARIOS ||--o{ TUTORIALES : "crea"
 ```
 
@@ -502,19 +504,73 @@ public class TutorialController {
 }
 ```
 
+<br>
+
+---
+
+<br>
+
+## CAPTURAS
+
+<br>
+
+#### LOGIN:
+
+![alt text](image.png)
+
+<br>
+
+#### REGISTRO:
+
+![alt text](image-1.png)
+
+<br>
+
+#### TUTORIALES ( Redirección por defecto desde login )
+
+![alt text](image-2.png)
+
+<br>
+
+#### Footer:
+
+![alt text](image-3.png)
+
+<br>
+
+#### USUARIOS:
+
+![alt text](image-4.png)
+
+<br>
+
+#### TUTORIALES ( Redirección desde lista de usuarios, filtra los tutoriales de un usuario en especifico )
+
+![alt text](image-5.png)
+
+<br>
+
+#### Tutorial ( Vista en la que se muestra el contenido completo de un tutorial, redireccionado desde el botón "ver tutorial" ):
+
+![alt text](image-6.png)
+
+<br>
+
+#### MIS TUTORIALES ( Crear y gestionar tutoriales, al momento de crear un nuevo tutorial, se lista debajo del formulario )
+
+![alt text](image-7.png)
+
 ---
 
 ## 3. CONCLUSIONES
 
 ### Logros Alcanzados
-1. **Tema oscuro moderno** con variables CSS y diseño profesional
-2. **Sistema de autenticación robusto** con gestión de sesiones
-3. **CRUD completo** para usuarios y tutoriales con validaciones
-4. **Relaciones JPA** correctamente implementadas (OneToMany/ManyToOne)
-5. **Interfaz moderna y responsive** con Bootstrap 5.3.2 + CSS personalizado
-6. **Base de datos extensa** con 50 usuarios y 50 tutoriales especializados
-7. **Contenido educativo real** con ejemplos de código y explicaciones detalladas
-8. **Favicon y branding** consistente en toda la aplicación
+1. **Sistema de autenticación simple** con gestión de sesiones
+2. **CRUD completo** para usuarios y tutoriales con validaciones
+3. **Relaciones JPA** correctamente implementadas (OneToMany/ManyToOne)
+4. **Interfaz responsiva** con Bootstrap 5.3.2 + CSS personalizado
+5. **Base de datos funcional** con 50 usuarios y 50 tutoriales
+6. **Contenido educativo de ejemplo** con ejemplos de código y explicaciones
 
 ### Tecnologías Utilizadas
 - **Backend:** Spring Boot 3.x, Spring Data JPA, Hibernate
@@ -525,14 +581,4 @@ public class TutorialController {
 
 ### Evolución del Proyecto
 
-| Aspecto | EV1 (Libros) | EV2 (Tutoriales) |
-|---------|--------------|------------------|
-| Entidades | 1 (LIBROS) | 2 (USUARIOS, TUTORIALES) |
-| Relaciones | Ninguna | 1:N (Usuario-Tutorial) |
-| Autenticación | No | Sí (login/registro) |
-| Interfaz | CSS básico | Tema oscuro moderno + Bootstrap |
-| Datos | 3 libros genéricos | 50 usuarios + 50 tutoriales especializados |
-| Contenido | Información básica | Tutoriales completos con código |
-| Funcionalidades | CRUD básico | CRUD + sesiones + validaciones + favicon |
-
-El proyecto ha evolucionado de un simple CRUD de libros a una aplicación web completa especializada en tutoriales de desarrollo de videojuegos, con autenticación, gestión de usuarios, interfaz moderna y funcionalidades avanzadas, demostrando el dominio de Spring Boot y las mejores prácticas de desarrollo web.
+El proyecto ha evolucionado de un simple CRUD de libros a una aplicación web básica pero completa enfocada en tutoriales de desarrollo de videojuegos, con autenticación, gestión de usuarios, interfaz moderna y funcionalidades avanzadas, mostrando funcionalidad de Spring Boot y buenas prácticas de desarrollo web.
