@@ -2,12 +2,11 @@
 
 
 
-![alt text](/src/main/resources/static/images/logo_ipss_mid.png)
+![IPSS Logo](/src/main/resources/static/images/logo_ipss_mid.png)
 
 <br>
 
-
-![alt text](/src/main/resources/static/images/brgd_logo_mid.png)
+![BedroomGameDev Logo](/src/main/resources/static/images/brgd_logo_mid.png)
 
 ## Sistema de Gestión de Tutoriales de Desarrollo de Videojuegos
 
