@@ -516,49 +516,49 @@ public class TutorialController {
 
 #### LOGIN:
 
-![alt text](image.png)
+![alt text](/src/main/resources/static/images/image.png)
 
 <br>
 
 #### REGISTRO:
 
-![alt text](image-1.png)
+![alt text](/src/main/resources/static/images/image-1.png)
 
 <br>
 
 #### TUTORIALES ( Redirección por defecto desde login )
 
-![alt text](image-2.png)
+![alt text](/src/main/resources/static/images/image-2.png)
 
 <br>
 
 #### Footer:
 
-![alt text](image-3.png)
+![alt text](/src/main/resources/static/images/image-3.png)
 
 <br>
 
 #### USUARIOS:
 
-![alt text](image-4.png)
+![alt text](/src/main/resources/static/images/image-4.png)
 
 <br>
 
 #### TUTORIALES ( Redirección desde lista de usuarios, filtra los tutoriales de un usuario en especifico )
 
-![alt text](image-5.png)
+![alt text](/src/main/resources/static/images/image-5.png)
 
 <br>
 
 #### Tutorial ( Vista en la que se muestra el contenido completo de un tutorial, redireccionado desde el botón "ver tutorial" ):
 
-![alt text](image-6.png)
+![alt text](/src/main/resources/static/images/image-6.png)
 
 <br>
 
 #### MIS TUTORIALES ( Crear y gestionar tutoriales, al momento de crear un nuevo tutorial, se lista debajo del formulario )
 
-![alt text](image-7.png)
+![alt text](/src/main/resources/static/images/image-7.png)
 
 ---
 
